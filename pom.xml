@@ -16,7 +16,7 @@
     <version>1.0.0</version>
     <name>Foundry (Parent)</name>
     <description>A typekit for Android.</description>
-    <url></url>
+    <url>https://bitbucket.org/josephearl/foundry</url>
 
     <modules>
         <module>library</module>
@@ -40,15 +40,15 @@
     </properties>
 
     <scm>
-        <url></url>
-        <connection></connection>
-        <developerConnection></developerConnection>
+        <url>https://bitbucket.org/josephearl/foundry</url>
+        <connection>scm:git:ssh://git@bitbucket.org/josephearl/foundry.git</connection>
+        <developerConnection>scm:git:ssh://git@bitbucket.org/josephearl/foundry.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
         <system>Bitbucket Issues</system>
-        <url></url>
+        <url>https://bitbucket.org/josephearl/foundry/issues</url>
     </issueManagement>
 
     <licenses>
@@ -58,10 +58,13 @@
         </license>
     </licenses>
 
-    <organization>
-        <name></name>
-        <url></url>
-    </organization>
+    <developers>
+        <developer>
+            <id>josephearl</id>
+            <name>Joseph Earl</name>
+            <email>joe@josephearl.co.uk</email>
+        </developer>
+    </developers>
 
     <dependencyManagement>
         <dependencies>
