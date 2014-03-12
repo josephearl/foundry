@@ -1,0 +1,7 @@
+local.properties
+atlassian-ide-plugin.xml
+target/
+.idea
+*.iml
+*.DS_Store
+
