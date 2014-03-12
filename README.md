@@ -95,7 +95,7 @@ Builds Foundry, the sample app and runs unit tests.
 
 Installs the Foundry library into your local Maven repository for use as a dependency by other projects.
 
-	$ mvn clean install
+	$ mvn clean install -Dandroid.test.skip=true
 
 **Note:** if you wish to generate a Gradle-compatible `aar` library rather than the Maven `apklib` simply change the packaging type used by the library.
 	
