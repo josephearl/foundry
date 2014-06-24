@@ -10,18 +10,26 @@ Foundry lets you style the typefaces of your views in your XML layout files and 
 
 Foundry currently supports `ttf` fonts only, although you may use a different extension if required.
 
-### Using Foundry
+### Dependency
 
-**Note:** Until Foundry is released on Maven Central, you will need to build the library yourself in order to use it in your own projects. See `Building Foundry: Install` for more information.
-
-**1. Add Foundry as a Dependency**
+**Maven**
 
 	<dependency>
 	    <groupId>uk.co.josephearl.foundry</groupId>
 	    <artifactId>foundry</artifactId>
-	    <version>1.0.0</version>
-	    <type>apklib</type>
+	    <version>1.0.2</version>
+	    <type>aar</type>
 	</dependency>
+
+**Gradle**
+
+    compile 'uk.co.josephearl.foundry:foundry:1.0.2@aar'
+
+### Using Foundry
+
+**1. Add Foundry as a Dependency**
+
+Add the Foundry dependency to your pom.xml or build.gradle.
 	
 **2. Add Typefaces to your Project**
 
