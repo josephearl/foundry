@@ -7,13 +7,13 @@
     <parent>
         <groupId>uk.co.josephearl.foundry</groupId>
         <artifactId>foundry-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>foundry</artifactId>
     <name>Foundry</name>
-    <packaging>apklib</packaging>
+    <packaging>aar</packaging>
 
     <dependencies>
         <dependency>

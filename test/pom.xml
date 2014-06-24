@@ -7,7 +7,7 @@
     <parent>
         <groupId>uk.co.josephearl.foundry</groupId>
         <artifactId>foundry-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -44,7 +44,7 @@
             <groupId>uk.co.josephearl.foundry</groupId>
             <artifactId>foundry</artifactId>
             <version>${project.version}</version>
-            <type>apklib</type>
+            <type>aar</type>
             <scope>provided</scope>
         </dependency>
     </dependencies>
