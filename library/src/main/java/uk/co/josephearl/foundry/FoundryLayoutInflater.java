@@ -10,17 +10,21 @@ import android.widget.TextView;
 
 public final class FoundryLayoutInflater extends AbstractCustomLayoutInflater {
 
-    private static final int[] TYPEFACE_ATTRIBUTESET = new int[]{R.attr.typeface};
+    private static final String TYPEFACE_ATTRIBUTE_NAME = "foundryTypeface";
+
     private final Foundry foundry;
+    private final int[] typefaceAttributeSet;
 
     public FoundryLayoutInflater(final Context context, final Foundry foundry) {
         super(context);
         this.foundry = foundry;
+        typefaceAttributeSet = new int[]{resolveTypefaceAttribute()};
     }
 
     protected FoundryLayoutInflater(final LayoutInflater original, final Context newContext, final Foundry foundry) {
         super(original, newContext);
         this.foundry = foundry;
+        typefaceAttributeSet = new int[]{resolveTypefaceAttribute()};
     }
 
     @Override
@@ -33,6 +37,11 @@ public final class FoundryLayoutInflater extends AbstractCustomLayoutInflater {
         if (view instanceof TextView) {
             applyTextViewAttributes((TextView) view, set);
         }
+    }
+
+    private int resolveTypefaceAttribute() {
+        return getContext().getResources().getIdentifier(TYPEFACE_ATTRIBUTE_NAME, "attr",
+                getContext().getPackageName());
     }
 
     private void applyTextViewAttributes(final TextView textView, final AttributeSet set) {
@@ -50,7 +59,7 @@ public final class FoundryLayoutInflater extends AbstractCustomLayoutInflater {
     }
 
     private String getTypefaceFromAttributes(final AttributeSet set) {
-        TypedArray a = getContext().obtainStyledAttributes(set, TYPEFACE_ATTRIBUTESET);
+        TypedArray a = getContext().obtainStyledAttributes(set, typefaceAttributeSet);
         String typeface = a.getString(0);
         a.recycle();
         return typeface;

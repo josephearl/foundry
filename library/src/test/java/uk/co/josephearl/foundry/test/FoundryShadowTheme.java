@@ -17,7 +17,7 @@ import static org.mockito.Mockito.when;
 @Implements(Resources.Theme.class)
 public class FoundryShadowTheme extends ShadowResources.ShadowTheme {
 
-    private static final String TYPEFACE_ATTR_NAME_SUFFIX = ":typeface";
+    private static final String TYPEFACE_ATTR_NAME_SUFFIX = ":foundryTypeface";
 
     public FoundryShadowTheme() {
     }
@@ -32,7 +32,7 @@ public class FoundryShadowTheme extends ShadowResources.ShadowTheme {
     }
 
     private boolean isTypefaceAttrs(final AttributeSet set, final int[] attrs) {
-        return set != null && attrs.length == 1 && attrs[0] == R.attr.typeface;
+        return set != null && attrs.length == 1 && attrs[0] == R.attr.foundryTypeface;
     }
 
     private TypedArray createTypefaceTypedArray(final AttributeSet set) {

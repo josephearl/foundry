@@ -13,7 +13,7 @@
     <groupId>uk.co.josephearl.foundry</groupId>
     <artifactId>foundry-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>Foundry (Parent)</name>
     <description>A typekit for Android.</description>
     <url>https://bitbucket.org/josephearl/foundry</url>

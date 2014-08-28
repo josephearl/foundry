@@ -17,13 +17,13 @@ Foundry currently supports `ttf` fonts only, although you may use a different ex
 	<dependency>
 	    <groupId>uk.co.josephearl.foundry</groupId>
 	    <artifactId>foundry</artifactId>
-	    <version>1.0.2</version>
+	    <version>1.0.3</version>
 	    <type>aar</type>
 	</dependency>
 
 **Gradle**
 
-    compile 'uk.co.josephearl.foundry:foundry:1.0.2@aar'
+    compile 'uk.co.josephearl.foundry:foundry:1.0.3@aar'
 
 ### Using Foundry
 
@@ -48,10 +48,15 @@ You can either manually create a `FoundryLayoutInflater` as required, or you can
 	    }
 	    return super.getSystemService(name);
 	}
+
+    @Override
+	public LayoutInflater getLayoutInflater() {
+	    return getFoundryLayoutInflater();
+	}
 	
 	private LayoutInflater getFoundryLayoutInflater() {
 	    if (foundryLayoutInflater == null) {
-	        foundryLayoutInflater = new FoundryLayoutInflater(this, new FoundryFoundry(getAssets()))
+	        foundryLayoutInflater = new FoundryLayoutInflater(this, new FoundryFoundry(getAssets()));
 	    }
 	    return foundryLayoutInflater;
 	}
@@ -61,15 +66,15 @@ You can either manually create a `FoundryLayoutInflater` as required, or you can
 
 Add the following to the root view in your layout file:
 
-	xmlns:foundry="http://schemas.android.com/apk/res-auto"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	
-Add `foundry:typeface` attributes to your views:
+Add `app:foundryTypeface` attributes to your views:
 
 	<TextView
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:text="Sample Text"
-	    foundry:typeface="font_name"
+	    app:foundryTypeface="font_name"
 	    />
 	    
 The `font_name` should match the name of your font file without the `.ttf` extension.
@@ -78,7 +83,7 @@ The `font_name` should match the name of your font file without the `.ttf` exten
 
 	<resources>
 	    <style name="StyledByFoundry">
-	        <item name="typeface">font_name</item>
+	        <item name="foundryTypeface">font_name</item>
 	    </style>
 	</resources>
 	

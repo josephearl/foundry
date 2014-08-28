@@ -1,5 +1,5 @@
 <resources>
     <style name="StyledByFoundry">
-        <item name="typeface">bentham</item>
+        <item name="foundryTypeface">bentham</item>
     </style>
 </resources>

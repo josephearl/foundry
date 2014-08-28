@@ -1,3 +1,3 @@
 <resources>
-    <attr name="typeface" format="string"/>
+    <attr name="foundryTypeface" format="string"/>
 </resources>
