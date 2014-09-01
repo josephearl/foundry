@@ -1,3 +1,0 @@
-int attr foundryTypeface 0x7f010000
-int layout test_layout_custom_view 0x7f020000
-int layout test_layout_simple 0x7f020001
