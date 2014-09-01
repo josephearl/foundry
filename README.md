@@ -12,6 +12,10 @@ Foundry currently supports `ttf` fonts only, although you may use a different ex
 
 ### Dependency
 
+**Gradle**
+
+    compile 'uk.co.josephearl.foundry:foundry:1.0.3@aar'
+
 **Maven**
 
 	<dependency>
@@ -20,10 +24,6 @@ Foundry currently supports `ttf` fonts only, although you may use a different ex
 	    <version>1.0.3</version>
 	    <type>aar</type>
 	</dependency>
-
-**Gradle**
-
-    compile 'uk.co.josephearl.foundry:foundry:1.0.3@aar'
 
 ### Using Foundry
 
@@ -80,13 +80,17 @@ Add `app:foundryTypeface` attributes to your views:
 	    
 The `font_name` should match the name of your font file without the `.ttf` extension.
 
-**Note:** you can leverage Foundry in your styles by using the `typeface` attribute without any prefix, e.g:
+You can leverage Foundry in your styles by using the `typeface` attribute without any prefix, e.g:
 
 	<resources>
 	    <style name="StyledByFoundry">
 	        <item name="foundryTypeface">font_name</item>
 	    </style>
 	</resources>
+
+**Note:** you can apply the Android default fonts using the reserved font names `normal`, `bold`, `sansSerif`,
+`serif` and `monospace` which correspond to `Typeface.DEFAULT`, `Typeface.DEFAULT_BOLD`, `Typeface.SANS_SERIF`,
+`Typeface.SERIF` and `Typeface.MONOSPACE`.
 	
 Foundry cannot be used inside text styles that are applied using `android:textAppearance`.
 
@@ -94,30 +98,34 @@ Foundry cannot be used inside text styles that are applied using `android:textAp
 
 **Requirements:**
 
-* Maven 3.1.1 or later
 * JDK 6 or 7
-* Android SDK with API level 19
-* `ANDROID_HOME` correctly set
+* Android SDK
 
 #### Compile
 
 Builds Foundry, the sample app and runs unit tests.
 
-	$ mvn clean verify
+	$ ./gradlew clean build
 	
 #### Install
 
 Installs the Foundry library into your local Maven repository for use as a dependency by other projects.
 
-	$ mvn clean install -Dandroid.test.skip=true
+	$ ./gradlew clean install
 
-**Note:** if you wish to generate a Gradle-compatible `aar` library rather than the Maven `apklib` simply change the packaging type used by the library.
-	
+**Note:** you will need to have Maven installed.
+
 #### Run Sample
 
-Builds Foundry and deploys the sample app to any connected devices.
+Builds Foundry and installs the sample app on any connected devices.
 
-	$ mvn clean install -DskipTests=true && mvn android:deploy -pl sample
+	$ ./gradlew clean installDebug
+
+#### Run Instrumentation Tests
+
+Deploys the sample app to connected devices and runs Android instrumentation tests.
+
+    $ ./gradlew clean connectedAndroidTest
 	
 ## License
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/Joseph/Workspace/foundry/foundry-library/build/intermediates/pre-dexed/test/debug/classes-2071ea77a9f0a8645e8a62cefc05e34e67e19aeb.jar"
+        jar="/Users/Joseph/Workspace/foundry/foundry-library/build/intermediates/bundles/debug/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="da71d2d5a9256af3911a191ab8617ba433645575"/>
+    <item
+        dex="/Users/Joseph/Workspace/foundry/foundry-sample/build/intermediates/pre-dexed/debug/classes-e349c5fdaaf58d0596c27d5d997cf00c8934039d.jar"
+        jar="/Users/Joseph/Workspace/foundry/foundry-sample/build/intermediates/exploded-aar/uk.co.josephearl.foundry/foundry-library/1.0.4-SNAPSHOT/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d3c2d61b4f056661250ba60a800ffc692c364abd"/>
+    <item
+        dex="/Users/Joseph/Workspace/foundry/foundry-sample/build/intermediates/pre-dexed/test/debug/fest-util-1.2.5-cd5c1350b21d6773aed38489c4878543be49768b.jar"
+        jar="/Users/Joseph/.gradle/caches/modules-2/files-2.1/org.easytesting/fest-util/1.2.5/c4a8d7305b23b8d043be12c979813b096df11f44/fest-util-1.2.5.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c4a8d7305b23b8d043be12c979813b096df11f44"/>
+    <item
+        dex="/Users/Joseph/Workspace/foundry/foundry-sample/build/intermediates/pre-dexed/test/debug/fest-assert-core-2.0M10-c6cdcde4a141405aa55621f4f448d8feb389e4e2.jar"
+        jar="/Users/Joseph/.gradle/caches/modules-2/files-2.1/org.easytesting/fest-assert-core/2.0M10/cb7c91cf614901928ae405f19d9bcdedf82781db/fest-assert-core-2.0M10.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="cb7c91cf614901928ae405f19d9bcdedf82781db"/>
+    <item
+        dex="/Users/Joseph/Workspace/foundry/foundry-library/build/intermediates/pre-dexed/test/debug/support-v4-18.0.0-5836511840b4b857edff92ef34c60a24f8c920cc.jar"
+        jar="/Development/android-sdk-macosx/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156"/>
+
+</pre-dex-items>

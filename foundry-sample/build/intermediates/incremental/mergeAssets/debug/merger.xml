@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="1.0.4-SNAPSHOT" >
+        <source path="/Users/Joseph/Workspace/foundry/foundry-sample/build/intermediates/exploded-aar/uk.co.josephearl.foundry/foundry-library/1.0.4-SNAPSHOT/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/Joseph/Workspace/foundry/foundry-sample/src/main/assets" >
+            <file
+                name="bentham.ttf"
+                path="/Users/Joseph/Workspace/foundry/foundry-sample/src/main/assets/bentham.ttf" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/Joseph/Workspace/foundry/foundry-sample/src/debug/assets" />
+    </dataSet>
+
+</merger>

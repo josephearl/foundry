@@ -1,1 +1,1 @@
-include ':library'
+include ':foundry-library',':foundry-sample'

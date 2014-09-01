@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/Joseph/Workspace/foundry/foundry-library/src/main/res/values/attrs.xml -->
+    <eat-comment />
+
+    <attr name="foundryTypeface" format="string" />
+    <!-- From: file:/Users/Joseph/Workspace/foundry/foundry-library/src/main/res/values/layout.xml -->
+    <eat-comment />
+
+    <item name="test_layout_custom_view" type="layout"/>
+    <item name="test_layout_simple" type="layout"/>
+
+</resources>
