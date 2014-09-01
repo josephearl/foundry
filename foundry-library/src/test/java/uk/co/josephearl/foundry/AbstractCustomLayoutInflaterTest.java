@@ -7,25 +7,27 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
+
 import uk.co.josephearl.foundry.test.FoundryTestConfig;
 import uk.co.josephearl.foundry.test.FoundryCustomView;
+import uk.co.josephearl.foundry.test.FoundryTestRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(FoundryTestRunner.class)
 @Config(manifest = FoundryTestConfig.DEFAULT)
 public class AbstractCustomLayoutInflaterTest {
 
     @Test
-    @Config(reportSdk=8)
+    @Config(reportSdk = 8)
     public void applyIsCalledOnceForAllViewsInHeirarchy() {
         Context context = Robolectric.getShadowApplication().getApplicationContext();
         TestCustomLayoutInflater inflater = new TestCustomLayoutInflater(context);
@@ -43,7 +45,7 @@ public class AbstractCustomLayoutInflaterTest {
     }
 
     @Test
-    @Config(reportSdk=18)
+    @Config(reportSdk = 18)
     public void applyIsCalledOnceForAllViewsInHeirarchyOnHoneycomb() {
         applyIsCalledOnceForAllViewsInHeirarchy();
     }

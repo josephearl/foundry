@@ -13,7 +13,7 @@ import java.io.File;
  */
 public class FoundryTestRunner extends RobolectricTestRunner {
 
-    private static final String MODULE_NAME = "foundry";
+    private static final String MODULE_NAME = "foundry-library";
 
     public FoundryTestRunner(final Class<?> testClass) throws InitializationError {
         super(testClass);

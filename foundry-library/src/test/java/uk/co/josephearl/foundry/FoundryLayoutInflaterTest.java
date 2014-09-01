@@ -7,15 +7,15 @@ import android.widget.TextView;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import uk.co.josephearl.foundry.test.FoundryShadowTheme;
 import uk.co.josephearl.foundry.test.FoundryTestConfig;
+import uk.co.josephearl.foundry.test.FoundryTestRunner;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(FoundryTestRunner.class)
 @Config(manifest = FoundryTestConfig.DEFAULT, shadows = {FoundryShadowTheme.class})
 public class FoundryLayoutInflaterTest {
 
