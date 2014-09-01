@@ -106,6 +106,9 @@ Foundry cannot be used inside text styles that are applied using `android:textAp
 Builds Foundry, the sample app and runs unit tests.
 
 	$ ./gradlew clean build
+
+**Note:** you can run unit tests in Android Studio by installing the [android-studio-unit-test-plugin](https://github.com/evant/android-studio-unit-test-plugin).
+In Android Studio go to Settings ⇢ Plugins ⇢ Browse Repositories… and search for 'Android Studio Unit Test'.
 	
 #### Install
 
