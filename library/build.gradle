@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "uk.co.josephearl.foundry"
+        minSdkVersion 8
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+apply plugin: 'android-unit-test'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:19.+'
+    testCompile 'junit:junit:4.+'
+    testCompile 'org.easytesting:fest-assert-core:2.0M10'
+    testCompile 'org.mockito:mockito-core:1.9.+'
+    testCompile 'org.robolectric:robolectric:2.2'
+}

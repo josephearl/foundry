@@ -37,7 +37,8 @@ Place your custom `ttf` fonts in your assets directory.
 
 **3. Use Foundry as your LayoutInflater**
 
-You can either manually create a `FoundryLayoutInflater` as required, or you can use Foundry as your default inflater views by adding the following code to your `Activity` classes:
+You can either manually create a `FoundryLayoutInflater` as required, or you can use Foundry as your default inflater
+ for views by adding the following code to your `Activity` classes:
 
 	private LayoutInflater foundryLayoutInflater;
 

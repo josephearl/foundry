@@ -2,6 +2,7 @@ local.properties
 atlassian-ide-plugin.xml
 target/
 .idea
+.gradle
 *.iml
 *.DS_Store
 
