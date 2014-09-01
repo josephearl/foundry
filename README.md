@@ -57,7 +57,7 @@ You can either manually create a `FoundryLayoutInflater` as required, or you can
 	
 	private LayoutInflater getFoundryLayoutInflater() {
 	    if (foundryLayoutInflater == null) {
-	        foundryLayoutInflater = new FoundryLayoutInflater(this, new FoundryFoundry(getAssets()));
+	        foundryLayoutInflater = new FoundryLayoutInflater(this);
 	    }
 	    return foundryLayoutInflater;
 	}
@@ -126,6 +126,15 @@ Builds Foundry and installs the sample app on any connected devices.
 Deploys the sample app to connected devices and runs Android instrumentation tests.
 
     $ ./gradlew clean connectedAndroidTest
+
+### Customizing Foundry
+
+#### Using a Subdirectory for Fonts
+
+If you want to place your fonts in an subdirectory of assets, e.g. `my-fonts`, just change the creation of your
+`FoundryLayoutInflater` to:
+
+    foundryLayoutInflater = new FoundryLayoutInflater(this, new FoundryFoundry(getAssets(), "my-fonts"));
 	
 ## License
 

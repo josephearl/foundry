@@ -15,6 +15,10 @@ public final class FoundryLayoutInflater extends AbstractCustomLayoutInflater {
     private final Foundry foundry;
     private final int[] typefaceAttributeSet;
 
+    public FoundryLayoutInflater(final Context context) {
+        this(context, new FoundryFoundry(context.getAssets()));
+    }
+
     public FoundryLayoutInflater(final Context context, final Foundry foundry) {
         super(context);
         this.foundry = foundry;
