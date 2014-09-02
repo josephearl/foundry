@@ -14,14 +14,14 @@ Foundry currently supports `ttf` fonts only, although you may use a different ex
 
 **Gradle**
 
-    compile 'uk.co.josephearl.foundry:foundry:1.0.3@aar'
+    compile 'uk.co.josephearl.foundry:foundry:1.0.4@aar'
 
 **Maven**
 
 	<dependency>
 	    <groupId>uk.co.josephearl.foundry</groupId>
 	    <artifactId>foundry</artifactId>
-	    <version>1.0.3</version>
+	    <version>1.0.4</version>
 	    <type>aar</type>
 	</dependency>
 
