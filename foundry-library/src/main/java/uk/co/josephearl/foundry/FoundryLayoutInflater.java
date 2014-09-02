@@ -13,27 +13,43 @@ public final class FoundryLayoutInflater extends AbstractCustomLayoutInflater {
     private static final String TYPEFACE_ATTRIBUTE_NAME = "foundryTypeface";
 
     private final Foundry foundry;
+    private final String defaultTypefaceName;
     private final int[] typefaceAttributeSet;
 
     public FoundryLayoutInflater(final Context context) {
         this(context, new FoundryFoundry(context.getAssets()));
     }
 
+    public FoundryLayoutInflater(final Context context, final String defaultTypefaceName) {
+        this(context, new FoundryFoundry(context.getAssets()), defaultTypefaceName);
+    }
+
     public FoundryLayoutInflater(final Context context, final Foundry foundry) {
+        this(context, foundry, null);
+    }
+
+    public FoundryLayoutInflater(final Context context, final Foundry foundry, final String defaultTypefaceName) {
         super(context);
         this.foundry = foundry;
+        this.defaultTypefaceName = defaultTypefaceName;
         typefaceAttributeSet = new int[]{resolveTypefaceAttribute()};
     }
 
     protected FoundryLayoutInflater(final LayoutInflater original, final Context newContext, final Foundry foundry) {
+        this(original, newContext, foundry, null);
+    }
+
+    protected FoundryLayoutInflater(final LayoutInflater original, final Context newContext, final Foundry foundry,
+            final String defaultTypefaceName) {
         super(original, newContext);
         this.foundry = foundry;
+        this.defaultTypefaceName = defaultTypefaceName;
         typefaceAttributeSet = new int[]{resolveTypefaceAttribute()};
     }
 
     @Override
     public LayoutInflater cloneInContext(final Context newContext) {
-        return new FoundryLayoutInflater(this, newContext, foundry);
+        return new FoundryLayoutInflater(this, newContext, foundry, defaultTypefaceName);
     }
 
     @Override
@@ -50,8 +66,9 @@ public final class FoundryLayoutInflater extends AbstractCustomLayoutInflater {
 
     private void applyTextViewAttributes(final TextView textView, final AttributeSet set) {
         String typefaceName = getTypefaceFromAttributes(set);
-        if (typefaceName != null) {
-            applyTypeface(textView, typefaceName);
+        String resolvedTypefaceName = typefaceName != null ? typefaceName : defaultTypefaceName;
+        if (resolvedTypefaceName != null) {
+            applyTypeface(textView, resolvedTypefaceName);
         }
     }
 
