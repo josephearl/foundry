@@ -130,7 +130,7 @@ Deploys the sample app to connected devices and runs Android instrumentation tes
 
     $ ./gradlew clean connectedAndroidTest
 
-### Customizing Foundry
+### FAQ
 
 #### Using a Subdirectory for Fonts
 
@@ -138,6 +138,22 @@ If you want to place your fonts in an subdirectory of assets, e.g. `my-fonts`, j
 `FoundryLayoutInflater` to:
 
     foundryLayoutInflater = new FoundryLayoutInflater(this, new FoundryFoundry(getAssets(), "my-fonts"));
+
+#### Lint Errors
+
+If you get Lint errors because of a missing prefix in your layout files add `xmlns:tools` to the root element
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+and `tools:ignore="MissingPrefix"` to the element you apply to the typeface to, for example:
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Sample Text"
+	    tools:ignore="MissingPrefix"
+	    app:foundryTypeface="font_name"
+	    />
 	
 ## License
 
