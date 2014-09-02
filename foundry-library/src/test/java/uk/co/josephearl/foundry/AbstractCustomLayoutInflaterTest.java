@@ -1,6 +1,8 @@
 package uk.co.josephearl.foundry;
 
+import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,6 +72,17 @@ public class AbstractCustomLayoutInflaterTest {
         View root = inflater.inflate(R.layout.test_layout_custom_view, null);
 
         assertThat(root).isInstanceOf(FoundryCustomView.class);
+    }
+
+    @Test
+    public void fragmentIsCorrectlyInflated() {
+        Activity activity = Robolectric.buildActivity(FragmentActivity.class).create().resume().get();
+        TestCustomLayoutInflater inflater = new TestCustomLayoutInflater(activity);
+        inflater.setFactory(activity);
+
+        View root = inflater.inflate(R.layout.test_layout_fragment, null);
+
+        assertThat(root).isNotNull();
     }
 
     private static class TestCustomLayoutInflater extends AbstractCustomLayoutInflater {

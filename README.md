@@ -58,6 +58,7 @@ You can either manually create a `FoundryLayoutInflater` as required, or you can
 	private LayoutInflater getFoundryLayoutInflater() {
 	    if (foundryLayoutInflater == null) {
 	        foundryLayoutInflater = new FoundryLayoutInflater(this);
+	        foundryLayoutInflater.setFactory(this);
 	    }
 	    return foundryLayoutInflater;
 	}

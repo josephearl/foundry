@@ -1,4 +1,6 @@
 <resources>
-    <item name="test_layout_simple" type="layout"></item>
-    <item name="test_layout_custom_view" type="layout"></item>
+    <item name="test_layout_simple" type="layout"/>
+    <item name="test_layout_custom_view" type="layout"/>
+    <item name="test_layout_fragment" type="layout"/>
+    <item name="test_layout_fragment_content" type="layout"/>
 </resources>
