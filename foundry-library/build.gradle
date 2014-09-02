@@ -1,0 +1,58 @@
+apply plugin: 'android-sdk-manager'
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId GROUP
+        minSdkVersion 8
+        targetSdkVersion 19
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    lintOptions {
+        disable 'GradleCompatible', 'GradleDependency'
+    }
+}
+
+apply plugin: 'android-unit-test'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:support-v4:$androidSupportV4Version"
+
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.easytesting:fest-assert-core:$festCoreVersion"
+    testCompile "org.mockito:mockito-core:$mockitoCoreVersion"
+    testCompile "org.robolectric:robolectric:$robolectricVersion"
+}
+
+// Use Maven to install the aar into our local maven repo.
+task install(type: Exec, dependsOn: assemble) {
+    executable = 'mvn'
+    args = [
+            "install:install-file",
+            "-DgroupId=$GROUP",
+            "-DartifactId=$POM_ARTIFACT_ID",
+            "-Dversion=${version}",
+            "-Dpackaging=$POM_PACKAGING",
+            "-Dfile=build/outputs/aar/${POM_ARTIFACT_ID}-${version}.aar"
+    ]
+}
+
+apply from: '../mvn-deploy.gradle'
