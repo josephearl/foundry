@@ -1,4 +1,4 @@
-# foundry
+# foundry [![Build Status](https://travis-ci.org/JosephEarl/foundry.svg?branch=master)](https://travis-ci.org/JosephEarl/foundry)
 
 The missing typekit for Android.
 
